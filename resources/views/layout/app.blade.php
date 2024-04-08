@@ -12,6 +12,42 @@
 
     @include('partials/header')
 
+    <div id="hero">
+
+
+        <div class="jumbo">
+            <img src="{{ Vite::asset('resources/img/jumbotron.png') }} alt="">
+        </div>
+        <div class="comics container">
+            <div class="current-series">
+                Current Series
+            </div>
+           
+            <div class="comic">
+
+                @foreach ($comics as $currentComic)
+    
+                <div>
+                    <img src="{{$currentComic['thumb']}}" alt="">
+                </div>
+    
+    
+                <span>
+                    {{ $currentComic['title'] }}
+                </span>
+
+            </div>
+        </div>
+
+        @endforeach
+
+        
+            <button class="btn">
+                Load more
+            </button>
+
+    </div>
+
   
 </body>
 </html>

@@ -21,7 +21,6 @@ nav {
 
     ul.links {
         display: flex;
-        align-items: stretch;
         gap: 30px;
         list-style-type: none;
         text-transform: uppercase;
@@ -32,6 +31,12 @@ nav {
             position: relative;
             display: flex;
             align-items: center;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+            }
 
 
             &.active {
