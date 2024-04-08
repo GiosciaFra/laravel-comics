@@ -16,35 +16,31 @@
 
 
         <div class="jumbo">
-            <img src="{{ Vite::asset('resources/img/jumbotron.png') }} alt="">
+            <img src="{{ Vite::asset('resources/img/jumbotron.jpg') }}" alt="">
         </div>
+
         <div class="comics container">
             <div class="current-series">
                 Current Series
             </div>
-           
-            <div class="comic">
+        
 
                 @foreach ($comics as $currentComic)
-    
-                <div>
-                    <img src="{{$currentComic['thumb']}}" alt="">
+                <div class="comic">
+                    <div class="comic-image">
+                        <img src="{{$currentComic['thumb']}}" alt="{{$currentComic['title']}}">
+                    </div>
+                    <span>{{ $currentComic['series'] }}</span>
                 </div>
-    
-    
-                <span>
-                    {{ $currentComic['title'] }}
-                </span>
-
-            </div>
-        </div>
-
-        @endforeach
-
-        
+            
+            @endforeach
+            
+            
+            
             <button class="btn">
                 Load more
             </button>
+        </div>
 
     </div>
 
